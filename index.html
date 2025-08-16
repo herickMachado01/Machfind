@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MachFind</title>
+  <link href="./styles/output.css" rel="stylesheet">
+</head>
+<body class="bg-white font-sans">
+    <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+        <img src="./assets/Logo.png" alt="MachFind Logo" class="h-8 w-10">
+        <span class="text-xl font-bold text-gray-900">MachFind</span>
+        </div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex gap-6 text-gray-700 font-medium">
+        <a href="#" class="nav-link">Início</a>
+        <a href="#" class="nav-link">Como Funciona</a>
+        <a href="#" class="nav-link">Profissionais</a>
+        <a href="#" class="nav-link">Planos</a>
+        <a href="#" class="nav-link">Contato</a>
+        </nav>
+
+        <!-- Botão Desktop -->
+        <a href="#"
+        class="hidden md:block bg-teal-500 hover:bg-teal-600 text-white font-semibold px-4 py-2 rounded-lg transition">
+        Cadastrar Negócio
+        </a>
+
+        <!-- Botão Mobile -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        </button>
+    </header>
+
+  <!-- Overlay -->
+    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-40 z-40"></div>
+
+  <!-- Menu Mobile (Drawer) -->
+    <nav id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 gap-6">
+        <button id="close-btn" class="self-end focus:outline-none">
+        <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        </button>
+        <a href="#" class="nav-link">Início</a>
+        <a href="#" class="nav-link">Como Funciona</a>
+        <a href="#" class="nav-link">Profissionais</a>
+        <a href="#" class="nav-link">Planos</a>
+        <a href="#" class="nav-link">Contato</a>
+        <a href="#"
+        class="bg-teal-500 text-center text-white font-semibold px-4 py-2 rounded-lg">
+        Cadastrar Negócio
+        </a>
+    </nav>
+
+  <!-- Hero -->
+    <section class="hero text-white px-6 py-20 md:py-28 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        MachFind — Achamos rápido <br class="hidden md:block"/> quem responde rápido.
+        </h1>
+        <p class="text-lg md:text-xl mb-10 text-gray-100">
+        Conectamos clientes a profissionais locais via <span class="font-bold">WhatsApp</span> em segundos.
+        </p>
+
+        <!-- Botões -->
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="#"
+            class="btn-primary">
+            Encontrar um profissional
+        </a>
+        <a href="#"
+            class="btn-secondary">
+            Cadastrar negócio
+        </a>
+        </div>
+    </section>
+</body>
+<script src="./js/script.js"></script>
+</html>
