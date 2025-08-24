@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body>
-    <h1>Login</h1>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen px-4">
+
+  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-6 sm:p-8">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Entrar</h2>
+    
+ 
+    <form id="formLogin" class="space-y-4">
+    
+      <div>
+        <label class="block text-gray-700 text-sm font-medium">E-mail</label>
+        <input type="email" required placeholder="seuemail@email.com"
+          class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
+
+      <div class="relative">
+        <label class="block text-gray-700 text-sm font-medium">Senha</label>
+        <input type="password" id="senha" required placeholder="********"
+          class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none pr-10">
+        <span id="toggleSenha" 
+          class="absolute inset-y-0 right-3 top-6 flex items-center cursor-pointer text-gray-500 hover:text-gray-700">
+          <i data-feather="eye"></i>
+        </span>
+      </div>
+
+      
+      <div class="flex items-center justify-between text-sm">
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded">
+          <span class="text-gray-600">Lembrar-me</span>
+        </label>
+        <a href="#" class="text-blue-600 hover:underline">Esqueci minha senha</a>
+      </div>
+
+     
+      <button type="submit"
+        class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition">
+        Entrar
+      </button>
+    </form>
+
+    <p class="text-center text-gray-600 mt-6 text-sm">
+      Não tem conta? 
+      <a href="cadastro.html" class="text-blue-600 hover:underline font-medium">Cadastre-se</a>
+    </p>
+  </div>
+
+  <script src="./js/login.js">  </script>
 </body>
 </html>
